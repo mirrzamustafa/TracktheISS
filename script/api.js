@@ -22,9 +22,9 @@ async function getISS() {
     mymap.setView([lat, lon], 3);
     firstTime = false;
   }
-  document.getElementById("lat").innerHTML = lat;
-  document.getElementById("long").innerHTML = lon;
-  document.getElementById("vel").innerHTML = vel;
+  document.getElementById("lat").innerHTML = lat.toFixed(2);
+  document.getElementById("long").innerHTML = lon.toFixed(2);
+  document.getElementById("vel").innerHTML = vel.toFixed(2);
 }
 getISS();
 setInterval(getISS, 1000);
